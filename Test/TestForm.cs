@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Handframe.ZipCode;
+using Handframe.Fipe;
 
 namespace Test
 {
     public partial class TestForm : Form
     {
+        private HFipe fipe = new HFipe();
+        private HCep cep = new HCep();
         public TestForm()
         {
             InitializeComponent();
@@ -21,13 +24,43 @@ namespace Test
         private void cepButton_Click(object sender, EventArgs e)
         {
             
-            string[] cep = new HCep().Get(this.cepText.Text);
-            this.enderecoText.Text = cep[0];
-            this.cidadeText.Text = cep[1];
-            this.complementoText.Text = cep[2];
-            this.estadoText.Text = cep[3];
-            this.ibgeText.Text = cep[4];
-            this.erroText.Text = cep[5];
+            string[] c = this.cep.Get(this.cepText.Text);
+            this.enderecoText.Text = c[0];
+            this.cidadeText.Text = c[1];
+            this.complementoText.Text = c[2];
+            this.estadoText.Text = c[3];
+            this.ibgeText.Text = c[4];
+            this.erroText.Text = c[5];
+        }
+        private void tipoCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.fipe.type = this.tipoCombo.SelectedText;
+            String m = this.fipe.GetBrands();
+        }
+        private void marcaButton_Click(object sender, EventArgs e)
+        {
+            string marcas;
+            marcas = this.fipe.GetBrands();
+        }
+
+        private void veiculoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modeloButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void anoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combustivelButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
