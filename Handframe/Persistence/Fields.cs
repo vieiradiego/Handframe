@@ -11,6 +11,5 @@ namespace Handframe.Persistence
     {
         void Clear(Object o);
         void Save(Object o);
-
     }
 }
