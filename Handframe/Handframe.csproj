@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,12 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fipe\HFipe.cs" />
-    <Compile Include="Fipe\Brands.cs" />
+    <Compile Include="DataBase\hConnection.cs" />
+    <Compile Include="Fipe\hFipe.cs" />
     <Compile Include="main.cs" />
-    <Compile Include="Persistence\Fields.cs" />
+    <Compile Include="Persistence\hField.cs" />
+    <Compile Include="Persistence\hPersistence.cs" />
+    <Compile Include="Persistence\hRegisters.cs" />
+    <Compile Include="Persistence\hSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZipCode\HCep.cs" />
+    <Compile Include="ZipCode\hCep.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

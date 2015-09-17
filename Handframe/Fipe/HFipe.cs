@@ -8,7 +8,15 @@ using Newtonsoft.Json;
 
 namespace Handframe.Fipe
 {
-    public class HFipe
+    public class hBrands
+    {
+        private String name { get; set; }
+        private String fipe_name { get; set; }
+        private int order { get; set; }
+        private String key { get; set; }
+        private String id { get; set; }
+    }
+    public class hFipe
     {
 
         //Modelo

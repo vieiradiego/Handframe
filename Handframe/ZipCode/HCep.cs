@@ -7,7 +7,7 @@ using Canducci.Zip;
 
 namespace Handframe.ZipCode
 {
-    public class HCep
+    public class hCep
     {
         public Boolean Find(string code)
         {

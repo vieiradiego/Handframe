@@ -14,8 +14,8 @@ namespace Test
 {
     public partial class TestForm : Form
     {
-        private HFipe fipe = new HFipe();
-        private HCep cep = new HCep();
+        private hFipe fipe = new hFipe();
+        private hCep cep = new hCep();
         public TestForm()
         {
             InitializeComponent();
