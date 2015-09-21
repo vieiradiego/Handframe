@@ -9,16 +9,17 @@ using System.Globalization;
 using System.Threading;
 using System.Resources;
 using Handframe.DataBase;
+using System.Windows.Forms;
 
 namespace Handframe.Persistence
 {
     public class hSystem
     {
-        public static string ArquivoConfiguracao = "inicializacao.gautica";
-        public static string ArquivoDiretorio = "diretorio.gautica";
+        public static string ConfigFile = "inicialization.hand";
+        public static string DirFile = "dir.hand";
         public static hConnection connection { get; set; }
-        public static string usuario { get; set; }
-        public static Form principal { get; set; }
+        public static string user { get; set; }
+        public static Form main { get; set; }
         public static bool released { get; set; }
         public static string passwordHand { get; set; }
         
@@ -36,6 +37,16 @@ namespace Handframe.Persistence
                 }
             }
             return true;
+        }
+        public static string ToStringBytesPostgres(byte[] bytes)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (byte b in bytes)
+            {
+                sb.Append(b.ToString());
+                sb.Append("/");
+            }
+            return sb.ToString();
         }
     }
 }

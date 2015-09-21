@@ -46,6 +46,7 @@
             this.complementoText = new System.Windows.Forms.TextBox();
             this.enderecoText = new System.Windows.Forms.TextBox();
             this.HFipePage = new System.Windows.Forms.TabPage();
+            this.tipoCombo = new System.Windows.Forms.ComboBox();
             this.combustivelButton = new System.Windows.Forms.Button();
             this.anoButton = new System.Windows.Forms.Button();
             this.modeloButton = new System.Windows.Forms.Button();
@@ -64,7 +65,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.marcaButton = new System.Windows.Forms.Button();
             this.tipoLabel = new System.Windows.Forms.Label();
-            this.tipoCombo = new System.Windows.Forms.ComboBox();
             this.testTab.SuspendLayout();
             this.HCepTab.SuspendLayout();
             this.HFipePage.SuspendLayout();
@@ -257,6 +257,19 @@
             this.HFipePage.Text = "HFipe";
             this.HFipePage.UseVisualStyleBackColor = true;
             // 
+            // tipoCombo
+            // 
+            this.tipoCombo.FormattingEnabled = true;
+            this.tipoCombo.Items.AddRange(new object[] {
+            "Carros",
+            "Motos",
+            "Caminhoes"});
+            this.tipoCombo.Location = new System.Drawing.Point(22, 27);
+            this.tipoCombo.Name = "tipoCombo";
+            this.tipoCombo.Size = new System.Drawing.Size(142, 21);
+            this.tipoCombo.TabIndex = 37;
+            this.tipoCombo.SelectedIndexChanged += new System.EventHandler(this.tipoCombo_SelectedIndexChanged);
+            // 
             // combustivelButton
             // 
             this.combustivelButton.Location = new System.Drawing.Point(322, 140);
@@ -412,19 +425,6 @@
             this.tipoLabel.TabIndex = 16;
             this.tipoLabel.Text = "Tipo";
             // 
-            // tipoCombo
-            // 
-            this.tipoCombo.FormattingEnabled = true;
-            this.tipoCombo.Items.AddRange(new object[] {
-            "Motos",
-            "Carros",
-            "Caminhoes"});
-            this.tipoCombo.Location = new System.Drawing.Point(22, 27);
-            this.tipoCombo.Name = "tipoCombo";
-            this.tipoCombo.Size = new System.Drawing.Size(142, 21);
-            this.tipoCombo.TabIndex = 37;
-            this.tipoCombo.SelectedIndexChanged += new System.EventHandler(this.tipoCombo_SelectedIndexChanged);
-            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +433,7 @@
             this.Controls.Add(this.testTab);
             this.Name = "TestForm";
             this.Text = "Test - Handframe";
+            this.Load += new System.EventHandler(this.TestForm_Load);
             this.testTab.ResumeLayout(false);
             this.HCepTab.ResumeLayout(false);
             this.HCepTab.PerformLayout();

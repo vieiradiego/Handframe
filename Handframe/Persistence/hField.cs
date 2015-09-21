@@ -175,9 +175,9 @@ namespace Handframe.Persistence
                 {
                     ImageConverter converter = new ImageConverter();
                     this.bytes_ = (byte[])converter.ConvertTo(value, typeof(byte[]));
-                    if (Sistema.conexao.IsPostgreSQL())
+                    if (hSystem.connection.IsPostgreSQL())
                     {
-                        this.valor = Sistema.ToStringBytesPostgres(this.bytes);
+                        this.value_ = hSystem.ToStringBytesPostgres(this.bytes_);
                     }
                 }
             }

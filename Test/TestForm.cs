@@ -9,16 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Handframe.ZipCode;
 using Handframe.Fipe;
+using Handframe.Persistence;
 
 namespace Test
 {
     public partial class TestForm : Form
     {
         private hFipe fipe = new hFipe();
+        private hBrands marcas = new hBrands();
+        private hModels modelos = new hModels();
+        private hModel modelo = new hModel();
+        private hVehicle veiculo = new hVehicle();
         private hCep cep = new hCep();
         public TestForm()
         {
             InitializeComponent();
+        }
+
+        private void TestForm_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void cepButton_Click(object sender, EventArgs e)
@@ -34,13 +44,14 @@ namespace Test
         }
         private void tipoCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.fipe.type = this.tipoCombo.SelectedText;
-            String m = this.fipe.GetBrands();
+            if (this.tipoCombo.SelectedIndex + 1 == hFipe.CARROS)
+            {
+                this.marcas.Get
+            }
         }
         private void marcaButton_Click(object sender, EventArgs e)
         {
-            string marcas;
-            marcas = this.fipe.GetBrands();
+        
         }
 
         private void veiculoButton_Click(object sender, EventArgs e)

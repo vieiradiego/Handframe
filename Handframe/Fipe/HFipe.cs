@@ -5,65 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
+using Handframe.Persistence;
 
 namespace Handframe.Fipe
 {
-    public class hBrands
+    public class hFipe : hPersistence
     {
-        private String name { get; set; }
-        private String fipe_name { get; set; }
-        private int order { get; set; }
-        private String key { get; set; }
-        private String id { get; set; }
-    }
-    public class hFipe
-    {
+        public const int CARROS = 1;
+        public const int MOTOS = 2;
+        public const int CAMINHOES = 3;
 
-        //Modelo
-        //http://fipeapi.appspot.com/api/1/[tipo]/[acao]/[parametros].json
-        //Carros
-        //http://fipeapi.appspot.com/api/1/carros/marcas.json
-        //Motos
-        //http://fipeapi.appspot.com/api/1/motos/marcas.json
-        //Caminhoes
-        //http://fipeapi.appspot.com/api/1/caminhoes/marcas.json
-
-        public string type { get; set; }
-        public string brand { get; set; }
-        public string models { get; set; }
-        public string model { get; set; }
-        public string vehicle { get; set; }
-
-
-        public String GetTypes()
+        public String name { get; set; }
+        public String key { get; set; }
+        public String id { get; set; }
+        public String fipe_codigo { get; set; }
+        public String combustivel { get; set; }
+        public String marca { get; set; }
+        public String ano_modelo { get; set; }
+        public String preco { get; set; }
+        public String veiculo { get; set; }
+        public String referencia { get; set; }
+        public String time { get; set; }
+        public String fipe_name { get; set; }
+        public String order { get; set; }
+        public String fipe_marca { get; set; }
+        public String modelo { get; set; }
+        public virtual String Get(int type)
         {
-            return "motos; carros; caminhoes;";
-        }
-        public String GetBrands()
-        {
-            type = "carros";
-            string m = new WebClient().DownloadString(@"http://fipeapi.appspot.com/api/1/" + type + "/marcas.json");
-            return m;
-        }
-
-        public String GetModels(string modelo)
-        {
-            brand = "21";
-            string m = new WebClient().DownloadString(@"http://fipeapi.appspot.com/api/1/"+ type + "/veiculos/"+ brand + ".json");
-            return m;
-        }
-        public String GetModel(string modelo)
-        {
-            models = "4828";
-            string m = new WebClient().DownloadString(@"http://fipeapi.appspot.com/api/1/" + type + "/veiculo/" + brand + "/" + models + ".json");
-            return m;
-        }
-
-        public String GetVehicle(string modelo)
-        {
-            model = "2013-1";
-            string m = new WebClient().DownloadString(@"http://fipeapi.appspot.com/api/1/" + type + "/veiculo/" + brand + "/" + models + "/" + model + ".json");
-            return m;
+            return type.ToString();
         }
     }
 }

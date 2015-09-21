@@ -25,14 +25,14 @@ namespace Handframe.Persistence
 
         public hRegisters(string contents)
         {
-            base.tabela = "registers";
+            base.tabela = "registers";//Criação da tabela através do código
             this.AddIdentity("id_register");
-            this.AddTexto("register");
-            this.AddInteiro("operation");
-            this.AddDataTempo("datahora");
-            this.AddTexto("usuario");
-            this.AddTexto("computador");
-            this.AddTexto("conteudo");
+            this.AddText("register");
+            this.AddInteger("operation");
+            this.AddDateTime("datetime");
+            this.AddText("user");
+            this.AddText("computer");
+            this.AddText("content");
             this.contents = contents;
         }
 
@@ -41,7 +41,7 @@ namespace Handframe.Persistence
             try
             {
                 hSystem.connection.Update("INSERT INTO registros (registro, operacao, datahora, usuario, computador, conteudo)" +
-                                          "VALUES ('" + register + "', " + operation + ", current_timestamp, '" + hSystem.usuario.Replace("'", "''") +
+                                          "VALUES ('" + register + "', " + operation + ", current_timestamp, '" + hSystem.user.Replace("'", "''") +
                                           "', '" + System.Environment.MachineName.Replace("'", "''") + "', '" + contents.Replace("'", "''") + "')", false);
             }
             catch (Exception ex)
