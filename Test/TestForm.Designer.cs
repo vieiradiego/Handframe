@@ -39,31 +39,26 @@
             this.estadoLabel = new System.Windows.Forms.Label();
             this.Label = new System.Windows.Forms.Label();
             this.enderecoLabel = new System.Windows.Forms.Label();
-            this.erroText = new System.Windows.Forms.TextBox();
+            this.cepErroText = new System.Windows.Forms.TextBox();
             this.ibgeText = new System.Windows.Forms.TextBox();
             this.estadoText = new System.Windows.Forms.TextBox();
             this.cidadeText = new System.Windows.Forms.TextBox();
             this.complementoText = new System.Windows.Forms.TextBox();
             this.enderecoText = new System.Windows.Forms.TextBox();
             this.HFipePage = new System.Windows.Forms.TabPage();
+            this.combustivelCombo = new System.Windows.Forms.ComboBox();
+            this.anoCombo = new System.Windows.Forms.ComboBox();
+            this.veiculoCombo = new System.Windows.Forms.ComboBox();
+            this.modeloCombo = new System.Windows.Forms.ComboBox();
+            this.marcaCombo = new System.Windows.Forms.ComboBox();
             this.tipoCombo = new System.Windows.Forms.ComboBox();
-            this.combustivelButton = new System.Windows.Forms.Button();
-            this.anoButton = new System.Windows.Forms.Button();
-            this.modeloButton = new System.Windows.Forms.Button();
-            this.veiculoButton = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.marcaButton = new System.Windows.Forms.Button();
+            this.fipeErroText = new System.Windows.Forms.TextBox();
             this.tipoLabel = new System.Windows.Forms.Label();
             this.testTab.SuspendLayout();
             this.HCepTab.SuspendLayout();
@@ -104,7 +99,7 @@
             this.testTab.Location = new System.Drawing.Point(12, 12);
             this.testTab.Name = "testTab";
             this.testTab.SelectedIndex = 0;
-            this.testTab.Size = new System.Drawing.Size(377, 237);
+            this.testTab.Size = new System.Drawing.Size(377, 274);
             this.testTab.TabIndex = 3;
             // 
             // HCepTab
@@ -115,7 +110,7 @@
             this.HCepTab.Controls.Add(this.estadoLabel);
             this.HCepTab.Controls.Add(this.Label);
             this.HCepTab.Controls.Add(this.enderecoLabel);
-            this.HCepTab.Controls.Add(this.erroText);
+            this.HCepTab.Controls.Add(this.cepErroText);
             this.HCepTab.Controls.Add(this.ibgeText);
             this.HCepTab.Controls.Add(this.estadoText);
             this.HCepTab.Controls.Add(this.cidadeText);
@@ -127,7 +122,7 @@
             this.HCepTab.Location = new System.Drawing.Point(4, 22);
             this.HCepTab.Name = "HCepTab";
             this.HCepTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HCepTab.Size = new System.Drawing.Size(369, 211);
+            this.HCepTab.Size = new System.Drawing.Size(369, 248);
             this.HCepTab.TabIndex = 0;
             this.HCepTab.Text = "HCep";
             this.HCepTab.UseVisualStyleBackColor = true;
@@ -186,12 +181,12 @@
             this.enderecoLabel.TabIndex = 9;
             this.enderecoLabel.Text = "Endereço";
             // 
-            // erroText
+            // cepErroText
             // 
-            this.erroText.Location = new System.Drawing.Point(244, 158);
-            this.erroText.Name = "erroText";
-            this.erroText.Size = new System.Drawing.Size(100, 20);
-            this.erroText.TabIndex = 8;
+            this.cepErroText.Location = new System.Drawing.Point(244, 158);
+            this.cepErroText.Name = "cepErroText";
+            this.cepErroText.Size = new System.Drawing.Size(100, 20);
+            this.cepErroText.TabIndex = 8;
             // 
             // ibgeText
             // 
@@ -230,92 +225,76 @@
             // 
             // HFipePage
             // 
+            this.HFipePage.Controls.Add(this.combustivelCombo);
+            this.HFipePage.Controls.Add(this.anoCombo);
+            this.HFipePage.Controls.Add(this.veiculoCombo);
+            this.HFipePage.Controls.Add(this.modeloCombo);
+            this.HFipePage.Controls.Add(this.marcaCombo);
             this.HFipePage.Controls.Add(this.tipoCombo);
-            this.HFipePage.Controls.Add(this.combustivelButton);
-            this.HFipePage.Controls.Add(this.anoButton);
-            this.HFipePage.Controls.Add(this.modeloButton);
-            this.HFipePage.Controls.Add(this.veiculoButton);
-            this.HFipePage.Controls.Add(this.textBox8);
             this.HFipePage.Controls.Add(this.label8);
             this.HFipePage.Controls.Add(this.label1);
             this.HFipePage.Controls.Add(this.label3);
             this.HFipePage.Controls.Add(this.label4);
             this.HFipePage.Controls.Add(this.label6);
             this.HFipePage.Controls.Add(this.label7);
-            this.HFipePage.Controls.Add(this.textBox1);
-            this.HFipePage.Controls.Add(this.textBox2);
-            this.HFipePage.Controls.Add(this.textBox3);
-            this.HFipePage.Controls.Add(this.textBox5);
-            this.HFipePage.Controls.Add(this.textBox6);
-            this.HFipePage.Controls.Add(this.marcaButton);
+            this.HFipePage.Controls.Add(this.fipeErroText);
             this.HFipePage.Controls.Add(this.tipoLabel);
             this.HFipePage.Location = new System.Drawing.Point(4, 22);
             this.HFipePage.Name = "HFipePage";
             this.HFipePage.Padding = new System.Windows.Forms.Padding(3);
-            this.HFipePage.Size = new System.Drawing.Size(369, 211);
+            this.HFipePage.Size = new System.Drawing.Size(369, 248);
             this.HFipePage.TabIndex = 1;
             this.HFipePage.Text = "HFipe";
             this.HFipePage.UseVisualStyleBackColor = true;
             // 
+            // combustivelCombo
+            // 
+            this.combustivelCombo.FormattingEnabled = true;
+            this.combustivelCombo.Location = new System.Drawing.Point(22, 224);
+            this.combustivelCombo.Name = "combustivelCombo";
+            this.combustivelCombo.Size = new System.Drawing.Size(142, 21);
+            this.combustivelCombo.TabIndex = 42;
+            // 
+            // anoCombo
+            // 
+            this.anoCombo.FormattingEnabled = true;
+            this.anoCombo.Location = new System.Drawing.Point(22, 184);
+            this.anoCombo.Name = "anoCombo";
+            this.anoCombo.Size = new System.Drawing.Size(142, 21);
+            this.anoCombo.TabIndex = 41;
+            // 
+            // veiculoCombo
+            // 
+            this.veiculoCombo.FormattingEnabled = true;
+            this.veiculoCombo.Location = new System.Drawing.Point(22, 143);
+            this.veiculoCombo.Name = "veiculoCombo";
+            this.veiculoCombo.Size = new System.Drawing.Size(142, 21);
+            this.veiculoCombo.TabIndex = 40;
+            // 
+            // modeloCombo
+            // 
+            this.modeloCombo.FormattingEnabled = true;
+            this.modeloCombo.Location = new System.Drawing.Point(22, 106);
+            this.modeloCombo.Name = "modeloCombo";
+            this.modeloCombo.Size = new System.Drawing.Size(142, 21);
+            this.modeloCombo.TabIndex = 39;
+            // 
+            // marcaCombo
+            // 
+            this.marcaCombo.FormattingEnabled = true;
+            this.marcaCombo.Location = new System.Drawing.Point(22, 66);
+            this.marcaCombo.Name = "marcaCombo";
+            this.marcaCombo.Size = new System.Drawing.Size(142, 21);
+            this.marcaCombo.TabIndex = 38;
+            // 
             // tipoCombo
             // 
             this.tipoCombo.FormattingEnabled = true;
-            this.tipoCombo.Items.AddRange(new object[] {
-            "Carros",
-            "Motos",
-            "Caminhoes"});
             this.tipoCombo.Location = new System.Drawing.Point(22, 27);
             this.tipoCombo.Name = "tipoCombo";
             this.tipoCombo.Size = new System.Drawing.Size(142, 21);
             this.tipoCombo.TabIndex = 37;
             this.tipoCombo.SelectedIndexChanged += new System.EventHandler(this.tipoCombo_SelectedIndexChanged);
-            // 
-            // combustivelButton
-            // 
-            this.combustivelButton.Location = new System.Drawing.Point(322, 140);
-            this.combustivelButton.Name = "combustivelButton";
-            this.combustivelButton.Size = new System.Drawing.Size(36, 23);
-            this.combustivelButton.TabIndex = 36;
-            this.combustivelButton.Text = "OK";
-            this.combustivelButton.UseVisualStyleBackColor = true;
-            this.combustivelButton.Click += new System.EventHandler(this.combustivelButton_Click);
-            // 
-            // anoButton
-            // 
-            this.anoButton.Location = new System.Drawing.Point(128, 181);
-            this.anoButton.Name = "anoButton";
-            this.anoButton.Size = new System.Drawing.Size(36, 23);
-            this.anoButton.TabIndex = 35;
-            this.anoButton.Text = "OK";
-            this.anoButton.UseVisualStyleBackColor = true;
-            this.anoButton.Click += new System.EventHandler(this.anoButton_Click);
-            // 
-            // modeloButton
-            // 
-            this.modeloButton.Location = new System.Drawing.Point(128, 142);
-            this.modeloButton.Name = "modeloButton";
-            this.modeloButton.Size = new System.Drawing.Size(36, 23);
-            this.modeloButton.TabIndex = 34;
-            this.modeloButton.Text = "OK";
-            this.modeloButton.UseVisualStyleBackColor = true;
-            this.modeloButton.Click += new System.EventHandler(this.modeloButton_Click);
-            // 
-            // veiculoButton
-            // 
-            this.veiculoButton.Location = new System.Drawing.Point(128, 104);
-            this.veiculoButton.Name = "veiculoButton";
-            this.veiculoButton.Size = new System.Drawing.Size(36, 23);
-            this.veiculoButton.TabIndex = 33;
-            this.veiculoButton.Text = "OK";
-            this.veiculoButton.UseVisualStyleBackColor = true;
-            this.veiculoButton.Click += new System.EventHandler(this.veiculoButton_Click);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(22, 66);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 31;
             // 
             // label8
             // 
@@ -329,7 +308,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(216, 168);
+            this.label1.Location = new System.Drawing.Point(260, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 29;
@@ -338,7 +317,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(213, 127);
+            this.label3.Location = new System.Drawing.Point(19, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 27;
@@ -356,7 +335,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 129);
+            this.label6.Location = new System.Drawing.Point(19, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 25;
@@ -365,56 +344,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 88);
+            this.label7.Location = new System.Drawing.Point(19, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 24;
             this.label7.Text = "Veículo";
             // 
-            // textBox1
+            // fipeErroText
             // 
-            this.textBox1.Location = new System.Drawing.Point(216, 184);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 23;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(216, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 22;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(22, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 21;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(22, 145);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 19;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(22, 104);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 18;
-            // 
-            // marcaButton
-            // 
-            this.marcaButton.Location = new System.Drawing.Point(128, 66);
-            this.marcaButton.Name = "marcaButton";
-            this.marcaButton.Size = new System.Drawing.Size(36, 23);
-            this.marcaButton.TabIndex = 15;
-            this.marcaButton.Text = "OK";
-            this.marcaButton.UseVisualStyleBackColor = true;
-            this.marcaButton.Click += new System.EventHandler(this.marcaButton_Click);
+            this.fipeErroText.Location = new System.Drawing.Point(263, 28);
+            this.fipeErroText.Multiline = true;
+            this.fipeErroText.Name = "fipeErroText";
+            this.fipeErroText.Size = new System.Drawing.Size(100, 136);
+            this.fipeErroText.TabIndex = 23;
             // 
             // tipoLabel
             // 
@@ -429,7 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 261);
+            this.ClientSize = new System.Drawing.Size(413, 298);
             this.Controls.Add(this.testTab);
             this.Name = "TestForm";
             this.Text = "Test - Handframe";
@@ -456,7 +398,7 @@
         private System.Windows.Forms.Label estadoLabel;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Label enderecoLabel;
-        private System.Windows.Forms.TextBox erroText;
+        private System.Windows.Forms.TextBox cepErroText;
         private System.Windows.Forms.TextBox ibgeText;
         private System.Windows.Forms.TextBox estadoText;
         private System.Windows.Forms.TextBox cidadeText;
@@ -468,20 +410,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button marcaButton;
+        private System.Windows.Forms.TextBox fipeErroText;
         private System.Windows.Forms.Label tipoLabel;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button veiculoButton;
-        private System.Windows.Forms.Button modeloButton;
-        private System.Windows.Forms.Button combustivelButton;
-        private System.Windows.Forms.Button anoButton;
         private System.Windows.Forms.ComboBox tipoCombo;
+        private System.Windows.Forms.ComboBox marcaCombo;
+        private System.Windows.Forms.ComboBox veiculoCombo;
+        private System.Windows.Forms.ComboBox modeloCombo;
+        private System.Windows.Forms.ComboBox combustivelCombo;
+        private System.Windows.Forms.ComboBox anoCombo;
     }
 }
 

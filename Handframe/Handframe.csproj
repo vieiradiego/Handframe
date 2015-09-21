@@ -51,11 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\hConnection.cs" />
-    <Compile Include="Fipe\hBrands.cs" />
+    <Compile Include="Fipe\hMarcas.cs" />
     <Compile Include="Fipe\hFipe.cs" />
-    <Compile Include="Fipe\hModel.cs" />
-    <Compile Include="Fipe\hModels.cs" />
-    <Compile Include="Fipe\hVehicle.cs" />
+    <Compile Include="Fipe\hModelo.cs" />
+    <Compile Include="Fipe\hModelos.cs" />
+    <Compile Include="Fipe\hVeiculo.cs" />
     <Compile Include="main.cs" />
     <Compile Include="Persistence\hField.cs" />
     <Compile Include="Persistence\hPersistence.cs" />

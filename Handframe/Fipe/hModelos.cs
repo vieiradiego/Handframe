@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace Handframe.Fipe
 {
-    public class hBrands : hFipe
+    public class hModelos : hFipe
     {
         public override String Get(int tipo)
         {
-            return new WebClient().DownloadString(@"http://fipeapi.appspot.com/api/1/" + tipo + "/marcas.json");
+          return new WebClient().DownloadString(@"http://fipeapi.appspot.com/api/1/" + tipo + "/veiculos/" + this.marca + ".json");
         }
     }
-    
 }

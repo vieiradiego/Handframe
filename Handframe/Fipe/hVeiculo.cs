@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Handframe.Fipe
 {
-    public class hVehicle : hFipe
+    public class hVeiculo : hFipe
     {
        public override String Get(int tipo)
         {

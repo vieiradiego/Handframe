@@ -16,10 +16,10 @@ namespace Test
     public partial class TestForm : Form
     {
         private hFipe fipe = new hFipe();
-        private hBrands marcas = new hBrands();
-        private hModels modelos = new hModels();
-        private hModel modelo = new hModel();
-        private hVehicle veiculo = new hVehicle();
+        private hMarcas marcas = new hMarcas();
+        private hModelos modelos = new hModelos();
+        private hModelo modelo = new hModelo();
+        private hVeiculo veiculo = new hVeiculo();
         private hCep cep = new hCep();
         public TestForm()
         {
@@ -28,7 +28,7 @@ namespace Test
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            
+            this.tipoCombo.Carregar();
         }
 
         private void cepButton_Click(object sender, EventArgs e)
@@ -40,13 +40,13 @@ namespace Test
             this.complementoText.Text = c[2];
             this.estadoText.Text = c[3];
             this.ibgeText.Text = c[4];
-            this.erroText.Text = c[5];
+            this.cepErroText.Text = c[5];
         }
         private void tipoCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.tipoCombo.SelectedIndex + 1 == hFipe.CARROS)
             {
-                this.marcas.Get
+                this.marcas.Get(hFipe.CARROS);
             }
         }
         private void marcaButton_Click(object sender, EventArgs e)
