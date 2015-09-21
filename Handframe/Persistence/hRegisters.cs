@@ -25,10 +25,10 @@ namespace Handframe.Persistence
 
         public hRegisters(string contents)
         {
-            base.tabela = "registros";
-            this.AddIdentidade("id_registro");
-            this.AddTexto("registro");
-            this.AddInteiro("operacao");
+            base.tabela = "registers";
+            this.AddIdentity("id_register");
+            this.AddTexto("register");
+            this.AddInteiro("operation");
             this.AddDataTempo("datahora");
             this.AddTexto("usuario");
             this.AddTexto("computador");

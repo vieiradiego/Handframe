@@ -36,8 +36,8 @@ namespace Handframe.Persistence
         public bool foreignKey_ { get; set; }
         public string tableFK_ { get; set; }
         public string fieldFK2_ { get; set; }
-        public DeleteUpdate toDelete_ { get; set; }
-        public DeleteUpdate toUpdate_ { get; set; }
+        public DeleteUpdate todelete_ { get; set; }
+        public DeleteUpdate toupdate_ { get; set; }
 
         public hField(string name)
         {
@@ -64,8 +64,8 @@ namespace Handframe.Persistence
             this.foreignKey_ = false;
             this.tableFK_ = "";
             this.fieldFK2_ = "";
-            this.toDelete_= DeleteUpdate.NOACTION;
-            this.toUpdate_ = DeleteUpdate.NOACTION;
+            this.todelete_= DeleteUpdate.NOACTION;
+            this.toupdate_ = DeleteUpdate.NOACTION;
         }
         public string value
         {
@@ -112,8 +112,8 @@ namespace Handframe.Persistence
             f.foreignKey_ = this.foreignKey_;
             f.tableFK_ = this.tableFK_;
             f.fieldFK2_ = this.fieldFK2_;
-            f.toDelete_ = this.toDelete_;
-            f.toUpdate_ = this.toUpdate_;
+            f.todelete_ = this.todelete_;
+            f.toupdate_ = this.toupdate_;
             return f;
         }
         public override bool Equals(object obj)
@@ -146,8 +146,8 @@ namespace Handframe.Persistence
                 f.foreignKey_ == this.foreignKey_ &&
                 f.tableFK_ == this.tableFK_ &&
                 f.fieldFK2_ == this.fieldFK2_ &&
-                f.toDelete_ == this.toDelete_ &&
-                f.toUpdate_ == this.toUpdate_;
+                f.todelete_ == this.todelete_ &&
+                f.toupdate_ == this.toupdate_;
             }
             return false;
         }
